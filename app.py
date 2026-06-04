@@ -1,9 +1,4 @@
 import streamlit as st
-installed = [m.name for m in pkgutil.iter_modules()]
-
-st.write("JOBLIB INSTALLED:", "joblib" in installed)
-st.write("LIGHTGBM INSTALLED:", "lightgbm" in installed)
-
 import joblib
 import pandas as pd
 import lightgbm as lgb
