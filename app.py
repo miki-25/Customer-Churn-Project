@@ -1,6 +1,6 @@
 import sys
-st.write(sys.version)
 import streamlit as st
+st.write(sys.version)
 import joblib
 import pandas as pd
 import lightgbm as lgb
