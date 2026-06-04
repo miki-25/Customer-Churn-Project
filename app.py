@@ -1,3 +1,5 @@
+import sys
+st.write(sys.version)
 import streamlit as st
 import joblib
 import pandas as pd
