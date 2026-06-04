@@ -1,4 +1,20 @@
 import streamlit as st
+
+packages = [
+    "joblib",
+    "pandas",
+    "numpy",
+    "plotly",
+    "lightgbm",
+    "sklearn"
+]
+
+for p in packages:
+    try:
+        __import__(p)
+        st.success(f"{p} OK")
+    except Exception as e:
+        st.error(f"{p} FAILED: {e}")
 from pathlib import Path
 
 st.write("APP STARTED")
