@@ -1,5 +1,14 @@
 import streamlit as st
-import streamlit as st
+from pathlib import Path
+
+st.write("APP STARTED")
+
+req = Path("requirements.txt")
+
+st.write("requirements.txt exists:", req.exists())
+
+if req.exists():
+    st.code(req.read_text())
 
 st.write("START")
 
