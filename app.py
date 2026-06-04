@@ -1,40 +1,5 @@
 import streamlit as st
-
-packages = [
-    "joblib",
-    "pandas",
-    "numpy",
-    "plotly",
-    "lightgbm",
-    "sklearn"
-]
-
-for p in packages:
-    try:
-        __import__(p)
-        st.success(f"{p} OK")
-    except Exception as e:
-        st.error(f"{p} FAILED: {e}")
-from pathlib import Path
-
-st.write("APP STARTED")
-
-req = Path("requirements.txt")
-
-st.write("requirements.txt exists:", req.exists())
-
-if req.exists():
-    st.code(req.read_text())
-
-st.write("START")
-
-try:
-    import joblib
-    st.write("JOBLIB OK")
-except Exception as e:
-    st.write("JOBLIB ERROR")
-    st.write(repr(e))
-    st.stop()
+import joblib
 import pandas as pd
 import lightgbm as lgb
 import plotly.graph_objects as go
