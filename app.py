@@ -1,7 +1,15 @@
-import sys
 import streamlit as st
-st.write(sys.version)
-import joblib
+import streamlit as st
+
+st.write("START")
+
+try:
+    import joblib
+    st.write("JOBLIB OK")
+except Exception as e:
+    st.write("JOBLIB ERROR")
+    st.write(repr(e))
+    st.stop()
 import pandas as pd
 import lightgbm as lgb
 import plotly.graph_objects as go
